@@ -3,18 +3,23 @@ package ua.ithillel.java;
 public class ArraysTest {
     public static void main(String[] args) {
 
-        int[][] score;
-        score = new int[][]{
-                {10, 11, 12, 13},
-                {20, 21, 22, 23},
-                {30, 31, 32, 33}
-        };
+        int[][] score = new int[3][4];
         int[] result = new int[score.length];
         int sum;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < score.length; i++) {
+            for (int j = 0; j < score[i].length; j++) {
+                score[i][j] = 10 * (i + 1) + j;
+                System.out.print(score[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < score.length; i++) {
             sum = 0;
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < score[i].length; j++) {
                 sum += score[i][j];
             }
             result[i] = sum;
