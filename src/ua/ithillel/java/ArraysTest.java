@@ -5,6 +5,7 @@ public class ArraysTest {
 
         int[][] score = new int[3][4];
         int[] result = new int[score.length];
+        int sum;
 
         for (int i = 0; i < score.length; i++) {
             for (int j = 0; j < score[i].length; j++) {
@@ -17,9 +18,11 @@ public class ArraysTest {
         System.out.println();
 
         for (int i = 0; i < score.length; i++) {
+            sum = 0;
             for (int j = 0; j < score[i].length; j++) {
-                result[i] += score[i][j];
+                sum += score[i][j];
             }
+            result[i] = sum;
             System.out.println(result[i]);
         }
     }
